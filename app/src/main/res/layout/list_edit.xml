@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="#FEF3DB"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="제목" />
+
+    <EditText
+        android:id="@+id/mod_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/round_menu"
+        android:hint="제목을 입력하세요."
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:maxLength="30"
+        android:paddingLeft="15dp"
+        android:privateImeOptions="defaultInputmode=korean"
+        android:selectAllOnFocus="true" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="내용" />
+
+    <EditText
+        android:id="@+id/mod_contents"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/round_menu"
+        android:gravity="top"
+        android:hint=" 내용을 입력하세요."
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:maxLength="300"
+        android:maxLines="10"
+        android:minLines="6"
+        android:padding="15dp"
+        android:privateImeOptions="defaultInputmode=korean"
+        android:selectAllOnFocus="true" />
+
+    <Button
+        android:id="@+id/mod_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#AEB6BF"
+        android:padding="10dp"
+        android:text="수정"
+        android:textColor="#ffffff"
+        android:textSize="18dp" />
+</LinearLayout>

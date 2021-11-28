@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fef2c8"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#B0BE9C"
+            android:elevation="5dp">
+
+
+            <Button
+                android:id="@+id/prevBtnAccount"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/leftarrow" />
+
+            <TextView
+                android:id="@+id/listTop"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="아이디/비밀번호 찾기"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- 아이디 찾기 -->
+            <LinearLayout
+                android:id="@+id/layout_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <EditText
+                        android:id="@+id/edt_id_name"
+                        android:layout_width="360dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/round_white"
+                        android:hint="  이름 입력" />
+
+                </LinearLayout>
+
+                <!-- 전화번호 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/Number"
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/round_menu"
+                        android:editable="false"
+                        android:hint="010"
+                        android:padding="10dp"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:padding="10dp"
+                        android:text="-"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edt_id_NumberF"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/round_menu"
+                        android:inputType="phone"
+                        android:maxLength="4"
+                        android:padding="10dp"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="50dp"
+                        android:padding="10dp"
+                        android:text="-"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edt_id_NumberB"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/round_menu"
+                        android:inputType="phone"
+                        android:maxLength="4"
+                        android:padding="10dp"
+                        android:textSize="20dp" />
+
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btn_idfind"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/findid"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <!-- 비밀번호 찾기 -->
+            <LinearLayout
+                android:id="@+id/layout_pw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <EditText
+                        android:id="@+id/edt_pw_id"
+                        android:layout_width="360dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/round_white"
+                        android:hint="  아이디 입력" />
+
+                </LinearLayout>
+
+                <!-- 이름 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <EditText
+                        android:id="@+id/edt_pw_name"
+                        android:layout_width="360dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/round_white"
+                        android:hint="  이름 입력" />
+
+                </LinearLayout>
+
+                <!-- 전화번호 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/pwNumber"
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/round_menu"
+                        android:editable="false"
+                        android:hint="010"
+                        android:padding="10dp"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:padding="10dp"
+                        android:text="-"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edt_pw_NumberF"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/round_menu"
+                        android:inputType="phone"
+                        android:maxLength="4"
+                        android:padding="10dp"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="50dp"
+                        android:padding="10dp"
+                        android:text="-"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edt_pw_NumberB"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/round_menu"
+                        android:inputType="phone"
+                        android:maxLength="4"
+                        android:padding="10dp"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_pwfind"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/findpw"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+        <RadioGroup
+            android:id="@+id/rg_idpw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checkedButton="@id/rb_id"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아이디 찾기" />
+
+            <RadioButton
+                android:id="@+id/rb_pw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비밀번호 찾기" />
+
+        </RadioGroup>
+    </LinearLayout>
+
+
+</ScrollView>

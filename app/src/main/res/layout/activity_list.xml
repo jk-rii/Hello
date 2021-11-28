@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEF3DB"
+    tools:context=".Activity_List">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--상단 바-->
+        <LinearLayout
+            android:id="@+id/TalkTop"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#AEB6BF"
+            android:elevation="5dp">
+
+            <Button
+                android:id="@+id/prevBtnTalk"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/leftarrow" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Talk"
+                android:textColor="#ffffff"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <!--검색창-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/round_menu"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <Spinner
+                android:id="@+id/search"
+                android:layout_width="110dp"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/etxt_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:ems="10"
+                android:hint="검색"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:privateImeOptions="defaultInputmode=korean" />
+
+        </LinearLayout>
+
+        <!--리스트 보이는 뷰-->
+        <ListView
+            android:id="@+id/listV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+    <!--글쓰기 버튼-->
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:padding="30dp">
+
+        <Button
+            android:id="@+id/btn_Write"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#74852D"
+            android:text="글쓰기"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

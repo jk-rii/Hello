@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.example.dangdang"
+    android:compileSdkVersion="29"
+    android:compileSdkVersionCodename="10"
+    android:versionCode="162"
+    android:versionName="1.18.5">
+
+    <uses-sdk android:targetSdkVersion="29" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_OWNER_DATA" />
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_dog"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_dog_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name="com.example.dangdang.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.example.dangdang.SubActivity"></activity>
+        <activity
+            android:name="com.example.dangdang.LoadingActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.example.dangdang.TMapAPI"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.example.dangdang.AddProfile" />
+        <activity android:name="com.example.dangdang.Activity_Calendar" />
+        <activity android:name="com.example.dangdang.DogPlus" />
+        <activity android:name="com.example.dangdang.Account" />
+        <activity android:name="com.example.dangdang.Activity_List" />
+        <activity android:name="com.example.dangdang.WriteActivity" />
+        <activity android:name="com.example.dangdang.Weather" />
+        <activity android:name=".Rank"/>
+        <activity
+            android:name="com.example.dangdang.PopupActivity"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.example.dangdang.ZoomActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="com.example.dangdang.ListEdit"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name="com.example.dangdang.IDPW_Found"/>
+
+    </application>
+
+</manifest>

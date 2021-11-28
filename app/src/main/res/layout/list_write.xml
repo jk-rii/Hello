@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDDAA0"
+    tools:context=".WriteActivity">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/calendarTop"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#AEB6BF"
+                android:elevation="5dp">
+
+                <Button
+                    android:id="@+id/prevBtnWrite"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/leftarrow" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Write"
+                    android:textColor="#ffffff"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="15dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp">
+
+
+                <EditText
+                    android:id="@+id/etxt_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/round_menu"
+                    android:hint="제목을 입력하세요."
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:paddingLeft="15dp"
+                    android:privateImeOptions="defaultInputmode=korean" />
+
+
+                <EditText
+                    android:id="@+id/etxt_contents"
+                    android:layout_width="match_parent"
+                    android:layout_height="155dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/round_menu"
+                    android:gravity="top"
+                    android:hint=" 내용을 입력하세요."
+                    android:inputType="textMultiLine"
+                    android:lines="4"
+                    android:maxLength="300"
+                    android:maxLines="10"
+                    android:minLines="6"
+                    android:padding="10dp"
+                    android:privateImeOptions="defaultInputmode=korean" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_menu"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/etxt_image"
+                            android:layout_width="115dp"
+                            android:layout_height="190dp"
+                            android:layout_gravity="center"
+                            android:background="#C8C8C8"
+                            android:scaleType="centerCrop" />
+                    </LinearLayout>
+
+                    <!--이동거리 걸린시간-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/round_menu"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="이동거리 : "
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/etxt_distance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:imeOptions="actionNext"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/round_menu"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="걸린시간 : "
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/etxt_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:imeOptions="actionNext"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/round_menu"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="위치 : "
+                                android:textSize="20sp" />
+
+                            <EditText
+                                android:id="@+id/etxt_addr"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:imeOptions="actionNext"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                        <!--평점-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/round_menu"
+                            android:orientation="horizontal">
+
+                            <!--<TextView
+                                android:id="@+id/score"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="평점 : "
+                                android:textSize="20sp" />-->
+
+                            <RatingBar
+                                android:id="@+id/rating"
+                                style="?android:attr/ratingBarStyleIndicator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:isIndicator="false"
+                                android:numStars="5"
+                                android:stepSize="0.5" />
+
+                            <TextView
+                                android:id="@+id/star"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="#000000"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout> <!--이동거리 걸린시간-->
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/line_dot"
+                    android:layerType="software" />
+
+                <TextView
+                    android:id="@+id/plus_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="5dp"
+                    android:text="+ 추가 정보 입력"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/round_menu"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/age"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="나이 : "
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/etxt_age"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:textColor="#000000"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/round_menu"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/kinds"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="견종 : "
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/etxt_speices"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:textColor="#000000"
+                        android:textSize="18dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/round_menu"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="성별: "
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/etxt_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:textColor="#000000"
+                        android:textSize="18dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/round_menu"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="무게 : "
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/etxt_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:textColor="#000000"
+                        android:textSize="18dp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="#485A30"
+                    android:text="작성 완료"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FEF3DB"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Daytxt"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:text="DAY"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/Hourtxt"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:text="HOUR" />
+
+        <TextView
+            android:id="@+id/Temptxt"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:text="TEMP"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/Wfkorimg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/clean" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="강수확률" />
+
+        <TextView
+            android:id="@+id/Poptxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:text="POP"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:textColor="#333" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
